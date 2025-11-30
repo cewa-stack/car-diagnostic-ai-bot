@@ -1,0 +1,11 @@
+# Wymagane biblioteki dla backendu i frontendu
+fastapi
+uvicorn
+google-genai
+pydantic
+sqlalchemy
+python-dotenv
+streamlit
+requests
+pandas
+anyio

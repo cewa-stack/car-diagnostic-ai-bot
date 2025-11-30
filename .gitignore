@@ -1,0 +1,16 @@
+# Plik .gitignore
+# Pliki, które Git ma ignorować
+
+# Środowisko wirtualne
+venv/
+.venv/
+
+# Klucze API/konfiguracja
+.env
+
+# Baza danych SQLite
+car_logs.db
+
+# Inne
+__pycache__/
+*.pyc
