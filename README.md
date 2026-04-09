@@ -26,51 +26,14 @@ System umożliwia zaawansowaną diagnostykę pojazdów w czasie rzeczywistym, wy
 * **Inne:** Python-dotenv, CORS Middleware
 
 
-###  Instrukcja Uruchomienia (Lokalnie)
-
-#### Krok 1: Klonowanie Repozytorium
-
-```bash
-git clone [https://github.com/TwojaNazwa/car-diagnostic-ai-bot.git](https://github.com/TwojaNazwa/car-diagnostic-ai-bot.git)
-cd car-diagnostic-ai-bot
-Krok 2: Konfiguracja Środowiska
-Utwórz Środowisko Wirtualne:
-
-Bash
-
-python -m venv venv
-source venv/bin/activate  # lub .\venv\Scripts\activate dla Windows
-Instalacja Zależności:
-
-Bash
-
-pip install -r requirements.txt
-Krok 3: Konfiguracja Klucza API
-Utwórz plik .env w głównym katalogu i wklej swój klucz API:
-
-# Plik .env
-GEMINI_API_KEY="YOUR_GEMINI_API_KEY_HERE"
-Krok 4: Uruchomienie Serwerów
-Uruchom Backend (w terminalu #1):
-
-Bash
-
-uvicorn backend_server:app --host 0.0.0.0 --port 8000
-Uruchom Frontend (w terminalu #2):
-
-Bash
-
-streamlit run dashboard.py
-Po uruchomieniu, otwórz w przeglądarce adres podany przez Streamlit (zwykle http://localhost:8501).
 
  Jak Przetestować
-Możesz przetestować system, wysyłając symulowane dane POST do serwera. Adres API to http://127.0.0.1:8000/analyze.
+Możesz przetestować system, wysyłając symulowane dane POST do serwera. Adres API to http://xxx.x.x.x:xxxx/analyze.
 
 Przykład użycia curl (Symulacja awarii zapłonu):
 
-Bash
 
-curl -X POST [http://127.0.0.1:8000/analyze](http://127.0.0.1:8000/analyze) \
+curl -X POST [http://xxx.x.x.x:xxxx/analyze](http://xxx.x.x.x:xxxx/analyze) \
 -H "Content-Type: application/json" \
 -d '{
     "device_id": "SIM_TEST_01",
