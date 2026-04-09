@@ -1,18 +1,16 @@
-# 🚗 Car Diagnostic AI Bot - System Diagnostyki Pojazdów OBD2
+#  Car Diagnostic AI Bot - System Diagnostyki Pojazdów OBD2
 
-**[TYTUŁ PRODUKTU]**
 ## AI Diagnostic System | Real-Time OBD2 Analysis with Gemini API
 
-Krótki opis produktu
 System umożliwia zaawansowaną diagnostykę pojazdów w czasie rzeczywistym, wykorzystując dane z modułu ESP32/OBD2, backend FastAPI oraz analityczny model Gemini do interpretacji kodów DTC i parametrów PID.
 
-❤️ **[Pierwsze zdanie - benefit]** Szybka i precyzyjna diagnoza usterek samochodowych, minimalizująca koszty i czas postoju.
-⭐️ **[Drugie zdanie - cecha]** Wykorzystuje model Gemini do generowania profesjonalnych raportów, obejmujących możliwe przyczyny, zalecane działania i szacowany koszt naprawy.
-✨ **[Trzecie zdanie - zastosowanie]** Idealne rozwiązanie dla warsztatów samochodowych i entuzjastów motoryzacji, do monitorowania stanu technicznego w czasie rzeczywistym.
+** Szybka i precyzyjna diagnoza usterek samochodowych, minimalizująca koszty i czas postoju.
+** Wykorzystuje model Gemini do generowania profesjonalnych raportów, obejmujących możliwe przyczyny, zalecane działania i szacowany koszt naprawy.
+** Idealne rozwiązanie dla warsztatów samochodowych i entuzjastów motoryzacji, do monitorowania stanu technicznego w czasie rzeczywistym.
 
 ---
 
-### 🚀 Funkcjonalności
+###  Funkcjonalności
 
 * **Real-Time Data Flow:** Odbiór danych (kody DTC, parametry Live PID) z urządzenia zewnętrznego (ESP32/OBD2).
 * **AI-Powered Analysis:** Wykorzystanie Google Gemini (model `gemini-2.0-flash`) do zaawansowanej interpretacji diagnostycznej w języku polskim.
@@ -20,19 +18,15 @@ System umożliwia zaawansowaną diagnostykę pojazdów w czasie rzeczywistym, wy
 * **Interactive Dashboard:** Intuicyjny interfejs użytkownika oparty na Streamlit do monitorowania danych na żywo i przeglądania historii.
 * **Caching Mechanism:** Wbudowany mechanizm buforowania w FastAPI, minimalizujący opóźnienia i koszty API.
 
-### 🛠️ Stos Technologiczny
+###  Stos Technologiczny
 
 * **Backend:** Python, FastAPI, Uvicorn, SQLAlchemy (SQLite)
 * **AI/ML:** Google Gemini API (`gemini-2.0-flash`), Pydantic (walidacja danych)
 * **Frontend:** Python, Streamlit (Dashboard)
 * **Inne:** Python-dotenv, CORS Middleware
 
-### 📂 Struktura Projektu
 
-car-diagnostic-ai-bot/ ├── backend_server.py # Główny serwer FastAPI (API, logika AI, cache) ├── database.py # Konfiguracja SQLAlchemy i model bazy danych ├── dashboard.py # Interaktywny interfejs użytkownika (Streamlit Frontend) ├── requirements.txt # Lista zależności Python └── .env.example # Przykład pliku konfiguracyjnego dla klucza API
-
-
-### ⚙️ Instrukcja Uruchomienia (Lokalnie)
+###  Instrukcja Uruchomienia (Lokalnie)
 
 #### Krok 1: Klonowanie Repozytorium
 
@@ -69,7 +63,7 @@ Bash
 streamlit run dashboard.py
 Po uruchomieniu, otwórz w przeglądarce adres podany przez Streamlit (zwykle http://localhost:8501).
 
-🧪 Jak Przetestować
+ Jak Przetestować
 Możesz przetestować system, wysyłając symulowane dane POST do serwera. Adres API to http://127.0.0.1:8000/analyze.
 
 Przykład użycia curl (Symulacja awarii zapłonu):
@@ -89,5 +83,3 @@ curl -X POST [http://127.0.0.1:8000/analyze](http://127.0.0.1:8000/analyze) \
 }'
 Cechy AI Diagnosty:
 ✔️ Szybka interpretacja kodów DTC i parametrów Live PID. ✔️ Szacowanie kosztów naprawy (w PLN) jako cenny wskaźnik. ✔️ Zapewnienie poziomu pewności diagnozy (Confidence Level).
-
-❓ Pytanie: Czy ten system wymaga fizycznego urządzenia (np. ESP32)? ✅ Odpowiedź: Tak, system jest zaprojektowany do współpracy z urządzeniem zbierającym dane OBD2 (np. ESP32/ELM327) i wysyłającym je przez sieć do backendu. Można go jednak testować, wysyłając dane przez API.
